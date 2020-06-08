@@ -73,7 +73,7 @@ public class SHA1 {
         int tmp;
         // 进行80轮计算
         for (int i = 0; i < 80; i++) {
-            // {h[0],h[1],h[2],h[3],h[4]}←{[(h[0]<<<5)+ft(h[1],h[2],h[3])+h[4]+w[i]+kt],
+            // {h[0],h[1],h[2],h[3],h[4]}←{(h[0]<<<5)+ft(h[1],h[2],h[3])+h[4]+w[i]+kt,
             // h[0], h[1]<<<30, h[3], h[4]}
             tmp = shiftLeft(h[0], 5) + ft(h[1], h[2], h[3], i) + h[4] + w[i] + kt[i / 20];
             h[4] = h[3];
@@ -146,7 +146,7 @@ public class SHA1 {
         System.out.print("message: ");
         byte[] m = scanner.nextLine().getBytes();
         byte[] h = hash(m);
-        System.out.println(new BigInteger(1, h).toString(16));
+        System.out.print(new BigInteger(1, h).toString(16));
         scanner.close();
     }
 }

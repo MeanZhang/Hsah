@@ -60,7 +60,7 @@ public class HMACSHA1 {
         for (int i = 0; i < k.length; i++)
             k[i] = (byte) Integer.parseInt(String.valueOf(c, 2 * i, 2), 16);
         byte[] h = encrypt(m, k);
-        System.out.println(new BigInteger(1, h).toString(16));
+        System.out.print(new BigInteger(1, h).toString(16));
         scanner.close();
     }
 }

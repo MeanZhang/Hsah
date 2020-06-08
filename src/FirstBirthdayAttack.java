@@ -61,7 +61,7 @@ public class FirstBirthdayAttack {
         System.out.printf("message with same %d bits:\n", n);
         System.out.println(new BigInteger(1, b).toString(16));
         System.out.println("hash:");
-        System.out.println(new BigInteger(1, h1).toString(16));
+        System.out.print(new BigInteger(1, h1).toString(16));
         scanner.close();
     }
 }
